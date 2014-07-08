@@ -1,3 +1,3 @@
 interface IObserver<T> {
-    update(t: T): T;
+    update(t: T): void;
 }
