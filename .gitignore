@@ -1,2 +1,6 @@
 .DS_Store
-**/*.js
+node_modules
+lib
+.npm-debug.log
+.sass-cache
+build
