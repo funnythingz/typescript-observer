@@ -11,20 +11,22 @@ Observer pattern for TypeScript
 
 class App {
 
-    // create Subject
+    // とあるJKがいました
     jk: JK<HentaiEvent> = new JK<HentaiEvent>();
 
     constructor() {
 
-        // create Observer
-        var omawari1: Omawari<HentaiEvent> = new Omawari<HentaiEvent>();
-
-        // create Event
+        // 変態事件が起きた！
         var kyahEvent: HentaiEvent = new HentaiEvent('キャー！');
 
+        // おまわりさんがタイミングよくあらわれた！
+        var omawari1: Omawari<HentaiEvent> = new Omawari<HentaiEvent>();
+
+        // JKはおまわりさんに助けを求めた！
         this.jk.attach(omawari1);
         this.jk.notify(kyahEvent);
 
+        // JKは落ち着いた！JKはおまわりさんを解放した！
         this.jk.detach(omawari1);
         this.jk.notify(kyahEvent);
 
