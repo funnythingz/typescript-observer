@@ -1,8 +1,8 @@
 /// <reference path="observer-interface.ts" />
 
-interface ISubject {
-    observers: Array<IObserver>;
-    attach(observer: IObserver): void;
-    detach(observer: IObserver): void;
-    notify(): void;
+interface ISubject<T> {
+    observers: Array<IObserver<T>>;
+    attach(observer: IObserver<T>): void;
+    detach(observer: IObserver<T>): void;
+    notify(t: T): void;
 }
