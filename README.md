@@ -2,28 +2,30 @@
 
 Observer pattern for TypeScript
 
-## Usage
+## Example
 
 ```TypeScript
 /// <reference path="observer.ts" />
-/// <reference path="hentai.ts" />
+/// <reference path="subject.ts" />
+/// <reference path="event.ts" />
 
 class App {
 
     constructor() {
 
         // create Subject
-        jk: JK = new JK();
+        var jk: JK<HentaiEvent> = new JK<HentaiEvent>();
 
         // create Observer
-        omawari: Omawari = new Omawari();
+        var omawari: Omawari<HentaiEvent> = new Omawari<HentaiEvent>();
 
         // create Event
-        hentaiEvent: HentaiEvent = new HentaiEvent();
+        var hentaiEvent: HentaiEvent = new HentaiEvent('キャー！');
 
         jk.attach(omawari);
 
         jk.notify(hentaiEvent);
+
     }
 
 }
