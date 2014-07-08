@@ -2,8 +2,10 @@
 
 class Omawari<T> implements IObserver<T> {
 
+    state: T;
+
     update(t: T) {
-        console.log(t);
+        this.state = t;
     }
 
 }
