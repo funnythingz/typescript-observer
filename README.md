@@ -19,7 +19,7 @@ class App {
         // 変態事件が起きた！
         var kyahEvent: HentaiEvent = new HentaiEvent('キャー！');
 
-        // おまわりさんがタイミングよくあらわれた！
+        // おまわりさんがあらわれた！
         var omawari1: Omawari<HentaiEvent> = new Omawari<HentaiEvent>();
 
         // JKはおまわりさんに助けを求めた！
